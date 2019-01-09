@@ -9,9 +9,9 @@
 // Premiere ligne
 
 $servername = "localhost";
-$username = "";
-$password = "";
-$dbname = "";
+$username = "id7331152_romainbon";
+$password = "Denise230134";
+$dbname = "id7331152_test";
 
 $conn = new mysqli($servername, $username, $password);
 
@@ -274,7 +274,7 @@ function afficherElevesetMugs ($IDELEVES) {
 
     if (isset($IDELEVES)){
 
-        $reponse = "SELECT mugs.description FROM eleves_mugs,mugs WHERE eleves_mugs.id_eleves = 76 AND eleves_mugs.id_mugs = mugs.id";
+        $reponse = "SELECT mugs.description FROM eleves_mugs,mugs WHERE eleves_mugs.id_eleves = $IDELEVES AND eleves_mugs.id_mugs = mugs.id";
         $result = $conn -> query($reponse);
 
 
